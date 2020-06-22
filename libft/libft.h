@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:16:11 by mgiraldo          #+#    #+#             */
-/*   Updated: 2020/06/17 12:31:20 by mg               ###   ########.fr       */
+/*   Updated: 2020/06/21 11:17:23 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,7 @@ int					ft_numlen(long long int n);
 int					ft_numlen_base(long long int n, size_t base);
 int					ft_numlen_base_unsigned(unsigned long long int n,
 															size_t base);
+int					ft_numlen_float(long double n);
 int					ft_atoi(const char *str);
 int					ft_atoi_base(const char *s, int base);
 int					ft_isalnum_base(char c, int base);
@@ -113,6 +114,9 @@ char				*ft_itoa_base(long long int n, int b);
 char				*ft_itoa_unsigned(unsigned long long int n);
 char				*ft_itoa_base_unsigned(unsigned long long int n, int b);
 char				*ft_dtoa(long double d, size_t p, size_t base);
+long double			ft_dtoa_round(long double nbr, int precision);
+int					ft_round_half_to_even(long double nbr, int precision);
+long double			ft_ldmod(long double x, long double y);
 
 /*
 ** 42 libft | stdio.h | Function sorted by return type
@@ -162,6 +166,7 @@ typedef	union		u_nbrx
 }					t_signbit;
 
 int					ft_abs(int n);
+long double			ft_abs_ld(long double n);
 long double			ft_pow(long double n, int pow);
 long double			ft_sqrt(long double n);
 int					ft_signbit(double x);

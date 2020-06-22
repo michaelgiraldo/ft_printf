@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_numlen_float.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 15:51:20 by mgiraldo          #+#    #+#             */
-/*   Updated: 2020/06/22 13:40:05 by mg               ###   ########.fr       */
+/*   Created: 2020/06/20 10:19:16 by mg                #+#    #+#             */
+/*   Updated: 2020/06/22 13:40:25 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int			ft_abs(int n)
+static int	ft_numlen_float_(long double n)
 {
-	return (n < 0 ? -n : n);
+	if (n >= 10)
+		return (ft_numlen_float_(n / 10) + 1);
+	return (1);
 }
 
-long double	ft_abs_ld(long double n)
+/*
+** ft_numlen_float returns the length of the interger prortion of a float
+*/
+
+int			ft_numlen_float(long double n)
 {
-	return (n < 0 ? -n : n);
+	n = (n < 0) ? n * -1 : n;
+	return (ft_numlen_float_(n));
 }

@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 13:22:08 by mg                #+#    #+#             */
-/*   Updated: 2020/06/17 15:32:02 by mg               ###   ########.fr       */
+/*   Updated: 2020/06/17 17:49:50 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ void	pf_format_exponent(t_fmt *flag)
 {
 	char *ptr;
 
-	if (!(flag->exponent == 0 && (flag->spec == 'g' || flag->spec == 'G')))
+	if (!(flag->exponent == 0 && (flag->spec == 'g' || flag->spec == 'G'))
+		&& !flag->is_nan && !flag->is_inf)
 	{
 		if (flag->is_normalized)
 		{

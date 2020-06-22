@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/02 14:16:51 by mg                #+#    #+#             */
-/*   Updated: 2020/06/17 15:31:33 by mg               ###   ########.fr       */
+/*   Updated: 2020/06/17 17:50:24 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ typedef struct	s_printf_format
 	size_t		is_normalized;
 	size_t		is_zero;
 	size_t		is_null;
+	size_t		is_nan;
+	size_t		is_inf;
 	size_t		is_integer;
 	size_t		is_float;
 	size_t		base;

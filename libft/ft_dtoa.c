@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/24 15:41:16 by mg                #+#    #+#             */
-/*   Updated: 2020/06/17 12:32:04 by mg               ###   ########.fr       */
+/*   Updated: 2020/06/22 13:38:56 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 ** https://en.cppreference.com/w/cpp/numeric/math/fmod
 */
 
-static long double	ft_ldmod(long double x, long double y)
+long double	ft_ldmod(long double x, long double y)
 {
 	x = x < 0 ? x * -1 : x;
 	y = y < 0 ? y * -1 : y;
 	return (x - (unsigned long long int)(x / y) * y);
 }
 
-static int			ft_round_half_to_even(long double nbr, int precision)
+int			ft_round_half_to_even(long double nbr, int precision)
 {
 	size_t is_even;
 	size_t is_half;
@@ -51,7 +51,7 @@ static int			ft_round_half_to_even(long double nbr, int precision)
 ** https://git.musl-libc.org/cgit/musl/tree/src/math/modf.c
 */
 
-long double			ft_dtoa_round(long double nbr, int precision)
+long double	ft_dtoa_round(long double nbr, int precision)
 {
 	size_t half_to_even;
 
@@ -59,13 +59,13 @@ long double			ft_dtoa_round(long double nbr, int precision)
 	if (half_to_even)
 		;
 	else if (nbr > 0)
-		nbr = nbr + (ft_pow(10, -precision - 1) * 5.1);
+		nbr = nbr + (ft_pow(10, -precision - 1) * 5.0);
 	else if (nbr < 0)
-		nbr = nbr - (ft_pow(10, -precision - 1) * 5.1);
+		nbr = nbr - (ft_pow(10, -precision - 1) * 5.0);
 	return (nbr);
 }
 
-char				*ft_dtoa(long double d, size_t p, size_t base)
+char		*ft_dtoa(long double d, size_t p, size_t base)
 {
 	long double				a;
 	char					*ptr1;
