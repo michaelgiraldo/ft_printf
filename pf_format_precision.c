@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 15:49:46 by mg                #+#    #+#             */
-/*   Updated: 2020/06/10 14:40:35 by mg               ###   ########.fr       */
+/*   Updated: 2020/06/28 12:44:09 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,16 @@ void	pf_format_precision(t_fmt *flag)
 	{
 		if (flag->is_negative && ++len)
 			*flag->print = '0';
-		while (len++ < flag->precision)
+		while (!flag->is_float && len++ < flag->precision)
 			ft_strappend_ox("0", &flag->print);
 		if (flag->is_negative)
 			ft_strappend_ox("-", &flag->print);
 	}
 	else if (!flag->is_numeric && flag->precision < len)
 	{
-		if (!(flag->precision == -1) && flag->spec != 'c')
+		if (IS_MACOS && flag->is_null && flag->spec == 'p')
+			;
+		else if (!(flag->precision == -1) && flag->spec != 'c')
 			ft_strclr(flag->print + flag->precision);
 	}
 }

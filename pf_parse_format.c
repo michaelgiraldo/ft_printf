@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/02 15:06:44 by mg                #+#    #+#             */
-/*   Updated: 2020/06/17 13:01:52 by mg               ###   ########.fr       */
+/*   Updated: 2020/06/28 12:43:57 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,16 @@ int		pf_parse_format(const char *format, va_list *ap, t_fmt *flag)
 	char *end;
 
 	end = pf_parse_specifier(format, flag);
-	if (end && *end != '%')
+	if (end)
 	{
 		pf_parse_flag(format, flag, end);
 		pf_parse_width(format, flag, end, ap);
 		pf_parse_precision(format, flag, end, ap);
 		pf_parse_length(flag, end);
 		pf_parse_base(flag);
+		if (!(IS_MACOS && *end == '%'))
+			if (*end == 'n' || *end == '%')
+				pf_reset_format(flag);
 	}
 	return (end ? (end - format) + 1 : 1);
 }
@@ -54,7 +57,7 @@ char	*pf_parse_specifier(const char *format, t_fmt *flag)
 	char *spec_flag;
 	char *tmp;
 
-	spec_list = "%diufFeEgGxXoscpaAn";
+	spec_list = IS_MACOS ? "%dDiufFeEgGxXoscpaAn" : "%diufFeEgGxXoscpaAn";
 	spec_flag = NULL;
 	++format;
 	while (*spec_list)

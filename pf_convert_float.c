@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/07 16:04:24 by mg                #+#    #+#             */
-/*   Updated: 2020/06/21 22:19:58 by mg               ###   ########.fr       */
+/*   Updated: 2020/06/24 03:13:08 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,20 +49,25 @@ static inline void	pf_convert_float_reset_flag(t_fmt *flag)
 	flag->pad = 0;
 	flag->alt = 0;
 	flag->precision = -1;
+	if (IS_MACOS && flag->is_nan)
+	{
+		flag->showsign = 0;
+		flag->space = 0;
+	}
 }
 
 void				pf_convert_float_print(long double nbr, t_fmt *flag)
 {
 	if (nbr != nbr)
 	{
-		pf_convert_float_reset_flag(flag);
 		flag->is_nan = 1;
+		pf_convert_float_reset_flag(flag);
 		flag->print = ft_signbit(nbr) ? ft_strdup("-nan") : ft_strdup("nan");
 	}
 	else if (ft_isinf(nbr))
 	{
-		pf_convert_float_reset_flag(flag);
 		flag->is_inf = 1;
+		pf_convert_float_reset_flag(flag);
 		flag->print = (nbr == (1.0 / 0.0)) ?
 									ft_strdup("inf") : ft_strdup("-inf");
 	}

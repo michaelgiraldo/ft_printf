@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 11:15:22 by mg                #+#    #+#             */
-/*   Updated: 2020/06/12 15:00:13 by mg               ###   ########.fr       */
+/*   Updated: 2020/06/23 14:44:54 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,197 +16,197 @@
 int pf_X_test(void)
 {
 	unsigned int X = 0;
-	int index = 0;
+	int index = -5;
 
 	X = -1;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X |ARG|####|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
-		ft_printf("| X | ft |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		   printf("| X | pf |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		ft_printf("| X | ft |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
 		++index;
 	}
 
 	X = -75;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X |ARG|####|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
-		ft_printf("| X | ft |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		   printf("| X | pf |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		ft_printf("| X | ft |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
 		++index;
 	}
 
 	X = -546475;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X |ARG|####|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
-		ft_printf("| X | ft |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		   printf("| X | pf |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		ft_printf("| X | ft |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
 		++index;
 	}
 
 	X = 0;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X |ARG|####|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
-		ft_printf("| X | ft |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		   printf("| X | pf |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		ft_printf("| X | ft |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
 		++index;
 	}
 
 	X = 876515;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X |ARG|####|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
-		ft_printf("| X | ft |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		   printf("| X | pf |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		ft_printf("| X | ft |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
 		++index;
 	}
 
 	X = 17895675;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X |ARG|####|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
-		ft_printf("| X | ft |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		   printf("| X | pf |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		ft_printf("| X | ft |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
 		++index;
 	}
 
 	X = 1;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X |ARG|####|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		printf("| X | pf |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
-		ft_printf("| X | ft |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		printf("| X | pf |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		ft_printf("| X | ft |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
 		++index;
 	}
 
 	X = 3419716;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X |ARG|####|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
-		ft_printf("| X | ft |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		   printf("| X | pf |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		ft_printf("| X | ft |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
 		++index;
 	}
 
 	X = 3115916;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X |ARG|####|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
-		ft_printf("| X | ft |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		   printf("| X | pf |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		ft_printf("| X | ft |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
 		++index;
 	}
 
 	X = 314;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X | pf |####|1|%0.*X|2|%025.*X|3|%0*.*X|4|%+0*.*X|5|%0*.15X|6|% 0*.X|7|%-0X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%0.*X|2|%025.*X|3|%0*.*X|4|%+0*.*X|5|%0*.15X|6|% 0*.X|7|%-0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
-		ft_printf("| X | ft |#%02X#|1|%0.*X|2|%025.*X|3|%0*.*X|4|%+0*.*X|5|%0*.15X|6|% 0*.X|7|%-0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
+		   printf("| X | pf |#%02d#|1|%0.*X|2|%025.*X|3|%0*.*X|4|%+0*.*X|5|%0*.15X|6|% 0*.X|7|%-0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
+		ft_printf("| X | ft |#%02d#|1|%0.*X|2|%025.*X|3|%0*.*X|4|%+0*.*X|5|%0*.15X|6|% 0*.X|7|%-0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
 		++index;
 	}
 
 	X = 314716;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X | pf |####|1|%#0.*X|2|%#025.*X|3|%#0*.*X|4|%+#0*.*X|5|%#0*.15X|6|% #0*.X|7|%-#0X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%#0.*X|2|%#025.*X|3|%#0*.*X|4|%+#0*.*X|5|%#0*.15X|6|% #0*.X|7|%-#0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
-		ft_printf("| X | ft |#%02X#|1|%#0.*X|2|%#025.*X|3|%#0*.*X|4|%+#0*.*X|5|%#0*.15X|6|% #0*.X|7|%-#0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
+		   printf("| X | pf |#%02d#|1|%#0.*X|2|%#025.*X|3|%#0*.*X|4|%+#0*.*X|5|%#0*.15X|6|% #0*.X|7|%-#0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
+		ft_printf("| X | ft |#%02d#|1|%#0.*X|2|%#025.*X|3|%#0*.*X|4|%+#0*.*X|5|%#0*.15X|6|% #0*.X|7|%-#0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
 		++index;
 	}
 
 	X = -1419716;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X | pf |####|1|%#+0.*X|2|%#+025.*X|3|%#+0*.*X|4|%+#+0*.*X|5|%#+0*.15X|6|% #+0*.X|7|%-#+0X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%#+0.*X|2|%#+025.*X|3|%#+0*.*X|4|%+#+0*.*X|5|%#+0*.15X|6|% #+0*.X|7|%-#+0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
-		ft_printf("| X | ft |#%02X#|1|%#+0.*X|2|%#+025.*X|3|%#+0*.*X|4|%+#+0*.*X|5|%#+0*.15X|6|% #+0*.X|7|%-#+0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
+		   printf("| X | pf |#%02d#|1|%#+0.*X|2|%#+025.*X|3|%#+0*.*X|4|%+#+0*.*X|5|%#+0*.15X|6|% #+0*.X|7|%-#+0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
+		ft_printf("| X | ft |#%02d#|1|%#+0.*X|2|%#+025.*X|3|%#+0*.*X|4|%+#+0*.*X|5|%#+0*.15X|6|% #+0*.X|7|%-#+0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
 		++index;
 	}
 
 	X = 879716;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X | pf |####|1|%#-0.*X|2|%#-025.*X|3|%#-0*.*X|4|%+#-0*.*X|5|%#-0*.15X|6|% #-0*.X|7|%-#-0X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%#-0.*X|2|%#-025.*X|3|%#-0*.*X|4|%+#-0*.*X|5|%#-0*.15X|6|% #-0*.X|7|%-#-0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
-		ft_printf("| X | ft |#%02X#|1|%#-0.*X|2|%#-025.*X|3|%#-0*.*X|4|%+#-0*.*X|5|%#-0*.15X|6|% #-0*.X|7|%-#-0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
+		   printf("| X | pf |#%02d#|1|%#-0.*X|2|%#-025.*X|3|%#-0*.*X|4|%+#-0*.*X|5|%#-0*.15X|6|% #-0*.X|7|%-#-0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
+		ft_printf("| X | ft |#%02d#|1|%#-0.*X|2|%#-025.*X|3|%#-0*.*X|4|%+#-0*.*X|5|%#-0*.15X|6|% #-0*.X|7|%-#-0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
 		++index;
 	}
 
 	X = 8419716;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X | pf |####|1|%# 0.*X|2|%# 025.*X|3|%# 0*.*X|4|%+# 0*.*X|5|%# 0*.15X|6|% # 0*.X|7|%-# 0X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%# 0.*X|2|%# 025.*X|3|%# 0*.*X|4|%+# 0*.*X|5|%# 0*.15X|6|% # 0*.X|7|%-# 0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
-		ft_printf("| X | ft |#%02X#|1|%# 0.*X|2|%# 025.*X|3|%# 0*.*X|4|%+# 0*.*X|5|%# 0*.15X|6|% # 0*.X|7|%-# 0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
+		   printf("| X | pf |#%02d#|1|%# 0.*X|2|%# 025.*X|3|%# 0*.*X|4|%+# 0*.*X|5|%# 0*.15X|6|% # 0*.X|7|%-# 0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
+		ft_printf("| X | ft |#%02d#|1|%# 0.*X|2|%# 025.*X|3|%# 0*.*X|4|%+# 0*.*X|5|%# 0*.15X|6|% # 0*.X|7|%-# 0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
 		++index;
 	}
 
 	X = 716;
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X | pf |####|1|%# 0.*X|2|%# 025.*X|3|%# 0*.*X|4|%+# 0*.*X|5|%# 0*.15X|6|% # 0*.X|7|%-# 0X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%# 0.*X|2|%# 025.*X|3|%# 0*.*X|4|%+# 0*.*X|5|%# 0*.15X|6|% # 0*.X|7|%-# 0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
-		ft_printf("| X | ft |#%02X#|1|%# 0.*X|2|%# 025.*X|3|%# 0*.*X|4|%+# 0*.*X|5|%# 0*.15X|6|% # 0*.X|7|%-# 0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
+		   printf("| X | pf |#%02d#|1|%# 0.*X|2|%# 025.*X|3|%# 0*.*X|4|%+# 0*.*X|5|%# 0*.15X|6|% # 0*.X|7|%-# 0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
+		ft_printf("| X | ft |#%02d#|1|%# 0.*X|2|%# 025.*X|3|%# 0*.*X|4|%+# 0*.*X|5|%# 0*.15X|6|% # 0*.X|7|%-# 0X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X, X);
 		++index;
 	}
 
-	index = 0;
+	index = -5;
 	printf("\n###########################################################################################################\n");
 	printf("%s", "| X |ARG|####|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n");
   	printf("###########################################################################################################\n");
 	while (index < 21)
 	{
-		   printf("| X | pf |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
-		ft_printf("| X | ft |#%02X#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		   printf("| X | pf |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
+		ft_printf("| X | ft |#%02d#|1|%.*X|2|%25.*X|3|%*.*X|4|%+*.*X|5|%0*.15X|6|% *.15X|\n", index, index, X, index, X, index, index, X, index, index, X, index, X, index, X);
 		++index;
 	}
 

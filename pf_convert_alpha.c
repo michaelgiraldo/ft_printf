@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/02 16:15:04 by mg                #+#    #+#             */
-/*   Updated: 2020/06/11 11:47:36 by mg               ###   ########.fr       */
+/*   Updated: 2020/06/28 00:40:46 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	pf_convert_str(va_list *ap, t_fmt *flag)
 		if (!ptr)
 		{
 			ft_strappend_xo(&flag->print, "(null)");
-			if (flag->precision != -1)
+			if (!IS_MACOS && flag->precision != -1)
 				flag->precision = flag->precision > 5 ? flag->precision : 0;
 		}
 		else
@@ -56,5 +56,7 @@ void	pf_convert_pct(t_fmt *flag)
 	{
 		flag->print = ft_strnew(0);
 		ft_strappend_xo_chr(&flag->print, '%');
+		if (IS_MACOS)
+			flag->is_numeric = 1;
 	}
 }

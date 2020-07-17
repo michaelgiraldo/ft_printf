@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 13:22:08 by mg                #+#    #+#             */
-/*   Updated: 2020/06/17 17:49:50 by mg               ###   ########.fr       */
+/*   Updated: 2020/06/27 22:12:07 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,12 @@
 
 void	pf_format_alternate(t_fmt *flag)
 {
-	if (flag->spec == 'p')
+	if (!flag->is_null && flag->spec == 'p')
+	{
+		if (!flag->left && flag->pad)
+			pf_format_padding_zero(flag);
 		ft_strappend_ox("0X", &flag->print);
+	}
 	if (flag->alt && flag->is_float)
 		if (!ft_strchr(flag->print, '.'))
 			ft_strappend_xo_chr(&flag->print, '.');
@@ -98,7 +102,8 @@ void	pf_format_padding_zero(t_fmt *flag)
 		len = ft_strlen(flag->print);
 		if (len < flag->width)
 		{
-			if (flag->alt && !flag->is_zero && pf_is_spec_xa(flag))
+			if (flag->spec == 'p' ||
+				(flag->alt && !flag->is_zero && pf_is_spec_ax(flag)))
 				len += 2;
 			if (*flag->print == '-' && ++len && (neg_flag = 1))
 				*flag->print = '0';

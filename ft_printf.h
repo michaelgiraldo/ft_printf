@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/26 13:56:06 by mg                #+#    #+#             */
-/*   Updated: 2020/06/17 15:10:26 by mg               ###   ########.fr       */
+/*   Updated: 2020/07/17 15:20:49 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "ft_printf_type.h"
 
 /*
+** update
 ** List of edge cases
 ** https://android.googlesource.com/
 ** platform/external/clang/+/d147f8f/test/Sema/format-strings.c
@@ -27,6 +28,7 @@
 int		ft_printf(const char *format, ...);
 void	pf_internal(const char *format, va_list *ap, t_fmt *flag);
 void	pf_intialize_format(t_fmt *flag);
+void	pf_reset_format(t_fmt *flag);
 void	pf_print(va_list *ap, t_fmt *flag);
 void	pf_print_null(t_fmt *flag);
 
@@ -67,7 +69,7 @@ int		pf_is_signed_spec(char specifier, t_fmt *flag);
 int		pf_is_unsigned_spec(char specifier, t_fmt *flag);
 int		pf_is_float_spec(char specifier, t_fmt *flag);
 int		pf_is_nonzero(int c);
-int		pf_is_spec_xa(t_fmt *flag);
+int		pf_is_spec_ax(t_fmt *flag);
 
 /*
 ** convert number specificers with approiate length
@@ -106,5 +108,11 @@ void	pf_convert_pct(t_fmt *flag);
 
 void	pf_convert_pointer(va_list *ap, t_fmt *flag);
 void	pf_convert_nbr_printed(va_list *ap, t_fmt *flag);
+
+# if __APPLE__
+#  define IS_MACOS 1
+# else
+#  define IS_MACOS 0
+# endif
 
 #endif

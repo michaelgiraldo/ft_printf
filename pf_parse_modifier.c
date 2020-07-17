@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/02 14:11:52 by mg                #+#    #+#             */
-/*   Updated: 2020/06/11 13:16:46 by mg               ###   ########.fr       */
+/*   Updated: 2020/06/23 22:06:14 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,16 +65,24 @@ void	pf_parse_width(const char *format, t_fmt *flag, char *end, va_list *ap)
 void	pf_parse_precision(const char *format, t_fmt *flag, char *end,
 																va_list *ap)
 {
+	int		nbrx;
+
 	while (format < end)
 	{
 		if (*format == '.')
 		{
 			if (*(format + 1) == '*')
-				flag->precision = va_arg(*ap, int);
-			else if ((format + 1) != end)
 			{
-				flag->precision = ft_atoi(format + 1);
+				nbrx = va_arg(*ap, int);
+				if (nbrx < 0 && pf_is_float_spec(flag->spec, flag))
+					flag->precision = 6;
+				else if (nbrx < 0)
+					flag->precision = -1;
+				else
+					flag->precision = ft_abs(nbrx);
 			}
+			else if ((format + 1) != end)
+				flag->precision = ft_atoi(format + 1);
 			else
 				flag->precision = 0;
 		}

@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:16:11 by mgiraldo          #+#    #+#             */
-/*   Updated: 2020/06/21 11:17:23 by mg               ###   ########.fr       */
+/*   Updated: 2020/06/23 19:53:47 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <stdint.h>
+# include <unistd.h>
 
 /*
 ** References for 42 libft of C Standard Library
